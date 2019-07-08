@@ -13,7 +13,11 @@ class TestController extends Controller
      */
     public function index()
     {
-        return view('result');
+    }
+
+    public function result()
+    {
+        return view('test.result');
     }
 
     /**
