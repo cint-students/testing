@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
+use DB;
 
 class TestController extends Controller
 {
@@ -41,8 +42,11 @@ class TestController extends Controller
      * @return \Illuminate\Http\Response
      */
     public function store(Request $request)
-    {
-        //
+    {      
+        DB::table('tests')->insert(
+            ['test'=>$request->testcode,
+            'description'=>$request->description]
+        );
     }
 
     /**
