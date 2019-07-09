@@ -13,11 +13,15 @@ class TestController extends Controller
      */
     public function index()
     {
+        $tests = [];
+        return view('tests.index', [
+            'tests' => $tests,
+        ]);
     }
 
     public function result()
     {
-        return view('test.result');
+        return view('tests.result');
     }
 
     /**
@@ -27,7 +31,7 @@ class TestController extends Controller
      */
     public function create()
     {
-        return  view('test.create');
+        return  view('tests.create');
     }
 
     /**

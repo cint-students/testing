@@ -19,6 +19,7 @@ Auth::routes();
 
 Route::get('/home', 'HomeController@index')->name('home');
 
-Route::get('tests/result','TestController@result')->name('test.result');
-Route::get('tests/create','TestController@create')->name('test.create');
-Route::post('/tests/create.store','TestController@store')->name('tests.store');
+Route::get('tests','TestController@index')->name('tests.index');
+Route::get('tests/result','TestController@result')->name('tests.result');
+Route::get('tests/create','TestController@create')->name('tests.create');
+Route::post('tests/create.store','TestController@store')->name('tests.store');
