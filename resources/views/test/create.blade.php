@@ -12,7 +12,8 @@
     }
 </style>
 <h1 style="text-align:center;">Добавление теста</h1>
-<form method="Post" action="test.store" style="margin-left: 50px;">
+<form method="Post" action="{{route('tests.store')}}" style="margin-left: 50px;">
+    {{ csrf_field() }}
     <label for="testcode">Testcode:</label><br>
     <textarea name="testcode" id="testcode" class="textarea"></textarea><br>
     <label for="descriptin">Description:</label><br>

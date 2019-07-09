@@ -21,3 +21,4 @@ Route::get('/home', 'HomeController@index')->name('home');
 
 Route::get('tests/result','TestController@result')->name('test.result');
 Route::get('tests/create','TestController@create')->name('test.create');
+Route::post('/tests/create.store','TestController@store')->name('tests.store');
