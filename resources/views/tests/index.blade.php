@@ -2,6 +2,22 @@
 
 @section('content')
 
+@if (count($errors) > 0)
+  <!-- Список ошибок формы -->
+  <div class="alert alert-danger">
+    <ul>
+      @foreach ($errors->all() as $error)
+        <li>{{ $error }}</li>
+      @endforeach
+    </ul>
+  </div>
+@endif
+
+
+@if(Session::has('message'))
+    <div class="alert {{ Session::get('alert-class', 'alert-info') }}">{{ Session::get('message') }}</div>
+@endif
+
 
 <div class="d-flex flex-row justify-content-center">
     <div class="p-2">
