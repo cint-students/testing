@@ -54,6 +54,7 @@ class TestController extends Controller
         );
 
         // 4. reuturn user to the page with message
+        return redirect()->route('tests.index')->with('message', 'Новая запись успешно добавлена');
     }
 
     /**
