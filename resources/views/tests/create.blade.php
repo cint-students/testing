@@ -14,7 +14,7 @@
 <form method="Post" action="{{route('tests.store')}}" style="margin-left: 50px;">
     {{ csrf_field() }}
     <label for="testcode">Testcode:</label><br>
-    <textarea name="testcode" id="testcode" class="textarea"></textarea><br>
+    <textarea name="test" id="test" class="textarea"></textarea><br>
     <label for="descriptin">Description:</label><br>
     <textarea name="description" id="description" class="textarea"></textarea>
     <p>

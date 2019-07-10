@@ -8,4 +8,8 @@ class Test extends Model
 {
     //
     // protected $table='tests';
+    protected $fillable = [
+        'test',
+        'description',
+    ];
 }

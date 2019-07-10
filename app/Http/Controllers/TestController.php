@@ -3,7 +3,7 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
-use DB;
+use App\Models\Test;
 
 class TestController extends Controller
 {
@@ -48,10 +48,7 @@ class TestController extends Controller
         // 2. check user right to add new record
 
         // 3. add new record
-        DB::table('tests')->insert(
-            ['test'=>$request->testcode,
-            'description'=>$request->description]
-        );
+        Test::create($request->all());
 
         // 4. reuturn user to the page with message
         return redirect()->route('tests.index')->with('message', 'Новая запись успешно добавлена');
