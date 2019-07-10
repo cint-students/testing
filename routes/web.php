@@ -22,4 +22,4 @@ Route::get('/home', 'HomeController@index')->name('home');
 Route::get('tests','TestController@index')->name('tests.index');
 Route::get('tests/result','TestController@result')->name('tests.result');
 Route::get('tests/create','TestController@create')->name('tests.create');
-Route::post('tests/create.store','TestController@store')->name('tests.store');
+Route::post('tests','TestController@store')->name('tests.store');

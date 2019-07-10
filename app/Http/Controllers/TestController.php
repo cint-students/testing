@@ -42,11 +42,18 @@ class TestController extends Controller
      * @return \Illuminate\Http\Response
      */
     public function store(Request $request)
-    {      
+    {
+        // 1. validate user input
+
+        // 2. check user right to add new record
+
+        // 3. add new record
         DB::table('tests')->insert(
             ['test'=>$request->testcode,
             'description'=>$request->description]
         );
+
+        // 4. reuturn user to the page with message
     }
 
     /**
