@@ -33,9 +33,11 @@
 
         <!-- Заголовок таблицы -->
         <thead>
-          <th></th>
-          <th></th>
-          <th></th>
+          <th>id</th>
+          <th>test</th>
+          <th>description</th>
+          <th>created at</th>
+          <th>updated at</th>
           <th></th>
         </thead>
 
@@ -47,15 +49,25 @@
           @foreach ($tests as $item)
             <tr>
               <td class="table-text">
-                <div>{{ $item }}</div>
+                <div>{{ $item->id }}</div>
               </td>
               <td class="table-text">
                 <div>
-
+                {{ $item->test }}
                 </div>
               </td>
               <td class="table-text">
-                <div></div>
+                <div>
+                {{ $item->description }}
+                </div>
+              </td>
+              <td class="table-text">
+                <div>
+                {{ $item->created_at}}
+                </div>
+              </td>
+              <td class="table-text">
+                <div>{{ $item->updated_at }}</div>
               </td>
               <td class="table-text">
                 <a href="{{ route('tests.index', ['id' =>$item->id]) }}" class="btn btn-info">edit</a>
