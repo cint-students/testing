@@ -47,19 +47,19 @@
           @foreach ($tests as $item)
             <tr>
               <td class="table-text">
-                <div>{{ $item['date']->format('d.m.Y') }}</div>
+                <div>{{ $item }}</div>
               </td>
               <td class="table-text">
                 <div>
-                  {{ $item['name'] }}
+
                 </div>
               </td>
               <td class="table-text">
-                <div>{{ $item['distance'] }}</div>
+                <div></div>
               </td>
               <td class="table-text">
-                <a href="{{ route('tests.show', ['id' =>$item->id]) }}" class="btn btn-info"><i class="fa fa-list"></i></a>
-                <a href="{{ route('tests.edit', ['id' =>$item->id]) }}" class="btn btn-info"><i class="fa fa-edit"></i></a>
+                <a href="{{ route('tests.index', ['id' =>$item->id]) }}" class="btn btn-info">edit</a>
+                <a href="{{ route('tests.index', ['id' =>$item->id]) }}" class="btn btn-info">delete</a>
               </td>
 
             </tr>

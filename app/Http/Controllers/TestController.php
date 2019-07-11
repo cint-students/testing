@@ -14,7 +14,7 @@ class TestController extends Controller
      */
     public function index()
     {
-        $tests = [];
+        $tests = Test::All();
         return view('tests.index', [
             'tests' => $tests,
         ]);
