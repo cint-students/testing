@@ -73,7 +73,8 @@ class TestController extends Controller
      */
     public function edit($id)
     {
-        //
+        $test=Test::find($id);
+        return view('tests.edit')->with('test',$test);
     }
 
     /**

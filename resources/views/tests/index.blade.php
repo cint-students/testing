@@ -70,7 +70,7 @@
                 <div>{{ $item->updated_at }}</div>
               </td>
               <td class="table-text">
-                <a href="{{ route('tests.index', ['id' =>$item->id]) }}" class="btn btn-info">edit</a>
+                <a href="{{ route('tests.edit', ['id' =>$item->id]) }}" class="btn btn-info">edit</a>
                 <a href="{{ route('tests.index', ['id' =>$item->id]) }}" class="btn btn-info">delete</a>
               </td>
 
