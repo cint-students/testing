@@ -11,8 +11,9 @@
         height: 200px;
     }
 </style>
-<form method="PUT" action="{{route('tests.update', $test->id)}}" style="margin-left: 50px;">
-    {{ csrf_field() }}
+<form method="POST" action="{{route('tests.update', $test->id)}}" style="margin-left: 50px;">
+    @method('PUT')
+    @csrf
     <label for="test">Test:</label><br>
     <textarea name="test" id="test" class="textarea">{{$test->test}}</textarea><br>
     <label for="descriptin">Description:</label><br>

@@ -86,7 +86,11 @@ class TestController extends Controller
      */
     public function update(Request $request, $id)
     {
-        //
+        $test=Test::find($id);
+        $test->test = $request->input('test');
+        $test->description=$request->input('description');
+        $test->save();
+        return redirect()->route('tests.index')->with('message', 'Запись обновлена');;
     }
 
     /**
