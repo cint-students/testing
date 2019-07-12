@@ -11,14 +11,14 @@
         height: 200px;
     }
 </style>
-<form method="PUT" action="{{TestController@update, $test->id}}" style="margin-left: 50px;">
+<form method="PUT" action="{{route('tests.update', $test->id)}}" style="margin-left: 50px;">
     {{ csrf_field() }}
     <label for="test">Test:</label><br>
     <textarea name="test" id="test" class="textarea">{{$test->test}}</textarea><br>
     <label for="descriptin">Description:</label><br>
     <textarea name="description" id="description" class="textarea">{{$test->description}}</textarea>
     <p>
-        <input type="submit" value="Добавить" class='btn btn-primary'>
+        <input type="submit" value="Сохранить" class='btn btn-primary'>
     </p>
 </form>
 @endsection
